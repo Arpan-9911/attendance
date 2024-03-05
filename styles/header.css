@@ -9,12 +9,13 @@
 .body{
   background-attachment: fixed;
   overflow-x: hidden;
+  text-decoration: none;
 }
 
 /* Basic styling for the header */
 .header {
   background-color: rgb(248, 148, 7);
-  padding: 20px 0;
+  padding: 20px 40px;
   background-image: linear-gradient(0deg, rgb(247, 184, 96), rgb(248, 148, 7));
   box-shadow: 2px 0 2px 2px rgb(247, 184, 96);
 }
@@ -77,8 +78,103 @@
   border-bottom: 4px solid purple;
 }
 
-/* Active page is home page */
+/* Active page */
 .main-nav ul li .active{
   color: rgb(138, 19, 53);
   border-bottom: 4px solid rgb(138, 19, 53);
+}
+
+/* Small Screen Main Navbar */
+.container .small-nav{
+  display: none;
+  position: fixed;
+  top: 98px;
+  right: -2px;
+  width: 300px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  align-items: center;
+}
+
+.container .small-nav div{
+  margin: 20px;
+}
+
+.container .small-nav div a{
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+.container .small-nav div a:hover{
+  border-bottom: 4px solid white;
+}
+
+.container .small-nav div .active{
+  color: rgb(165, 247, 244);
+  border-bottom: 4px solid rgb(165, 247, 244);
+}
+
+.container .small-screen-icon{
+  display: none;
+}
+
+/* Small screen navbar active */
+.container .small-nav.active{
+  display: flex;
+  flex-direction: column;
+}
+
+/* Media Query at 950px */
+@media (max-width: 950px) {
+  /* Hiding large-screen Navbar*/
+  .container .main-nav{
+    display: none;
+  }
+
+  /* Logo styling */
+  .logo a {
+    font-size: 15px;
+  }
+
+  /* logo styling */
+  .logo a .logo-div div img{
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  }
+
+  /* Display Menu Btn */
+  .container .small-screen-icon{
+    display: block;
+    color: white;
+    font-size: 30px;
+  }
+}
+
+/* Media Query at 550px */
+@media (max-width: 550px) {
+  /* reducing padding */
+  .header{
+    padding: 10px;
+  }
+
+  /* Logo styling */
+  .logo a {
+    font-size: 12px;
+  }
+
+  /* logo styling */
+  .logo a .logo-div div img{
+    display: none;
+  }
+
+  .container .small-nav{
+    top: 65px;
+    right: 0;
+    width: 100%;
+  }
 }
