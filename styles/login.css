@@ -1,0 +1,64 @@
+.form-wrapper{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form-wrapper header{
+  width: 400px;
+  color: red;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.form-wrapper form{
+  width: 400px;
+  height: fit-content;
+}
+.form-wrapper form .field{
+  display: flex;
+  flex-direction: column;
+}
+.form-wrapper form .field label{
+  font-size: 22px;
+  margin-bottom: 2px;
+}
+.form-wrapper form .field input{
+  font-size: 16px;
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid rgb(173, 173, 173);
+  color: gray;
+}
+.form-wrapper form .field input:focus{
+  border-color: aqua;
+}
+.form-wrapper form .field .submit-btn{
+  width: 40%;
+  margin: auto;
+  margin-top: 20px;
+  border-color: rgb(47, 255, 57);
+  background-color: rgb(47, 255, 57);
+  font-size: 25px;
+  padding: 0;
+  color: white;
+  font-weight: 700;
+}
+.form-wrapper form .field .submit-btn:active{
+  background-color: green;
+  border-color: rgb(47, 255, 57);
+}
+@media (max-width: 550px) {
+  .form-wrapper header{
+    width: 260px;
+  }
+  .form-wrapper form{
+    width: 260px;
+  }
+}
